@@ -11,7 +11,7 @@ const wait = (waitTime) => new Promise((resolve) => {
 app.use(express.json())
 
 app.get('/assets/main.css', async (req, res) => {
-  await wait(10000)
+  await wait(0)
 
   res.sendFile(
     path.resolve(__dirname, 'assets/main.css')
@@ -19,7 +19,7 @@ app.get('/assets/main.css', async (req, res) => {
 })
 
 app.get('/assets/main.js', async (req, res) => {
-  await wait(0)
+  await wait(10000)
 
   res.sendFile(
     path.resolve(__dirname, 'assets/main.js')
